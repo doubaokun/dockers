@@ -11,23 +11,23 @@ Running docker containers in virtualbox which is maintained by Vagrant.
 Start Vagrant, rebuild Vagrant
 ---------------
 
-vagrant init precise64 http://files.vagrantup.com/precise64.box
-vagrant up
-vagrant reload
+	vagrant init precise64 http://files.vagrantup.com/precise64.box
+	vagrant up
+	vagrant reload
 
 Start Kafka
 ----------------
 
-vagrant ssh
-cd /vagrant
-./start.sh
+	vagrant ssh
+	cd /vagrant
+	./start.sh
 
 Useful Docker commands
 ----------------
 
-sudo docker ps
-sudo docker images
-sudo docker tag xxxxxxxx bruce/kafka
-sudo docker run -t -i xxxxxxxx bash
-sudo docker build -t bruce/hello .
-sudo docker stop xxxxxxxx
+	sudo docker ps
+	sudo docker images
+	sudo docker tag xxxxxxxx bruce/kafka
+	sudo docker run -t -i xxxxxxxx bash
+	sudo docker build -t bruce/hello .
+	sudo docker stop xxxxxxxx
