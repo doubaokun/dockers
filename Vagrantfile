@@ -8,4 +8,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :forwarded_port, host: 2181, guest: 2181
   config.vm.network :forwarded_port, host: 9092, guest: 9092
 
+  config.vm.network :forwarded_port, host: 8081, guest: 8080
+  config.vm.network :forwarded_port, host: 7077, guest: 7077
+
+
 end

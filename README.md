@@ -7,6 +7,7 @@ Running docker containers in virtualbox which is maintained by Vagrant.
 2. Zookeeper
 3. Kafka with zookeeper
 4. Java application template
+5. Spark single node
 
 Start Vagrant, rebuild Vagrant
 ---------------
