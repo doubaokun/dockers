@@ -7,7 +7,7 @@ Running docker containers in virtualbox which is maintained by Vagrant.
 2. Zookeeper
 3. Kafka with zookeeper
 4. Java application template
-5. Spark single node
+5. Spark standalone for development, the UI will be available at 8081 at your machine
 
 Start Vagrant, rebuild Vagrant (at the current git repo dir, it will be mounted to /vagrant dir in guest machine)
 ---------------
