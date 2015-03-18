@@ -9,7 +9,7 @@ Running docker containers in virtualbox which is maintained by Vagrant.
 4. Java application template
 5. Spark single node
 
-Start Vagrant, rebuild Vagrant
+Start Vagrant, rebuild Vagrant (at the current git repo dir, it will be mounted to /vagrant dir in guest machine)
 ---------------
 
 	vagrant init precise64 http://files.vagrantup.com/precise64.box
