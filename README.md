@@ -2,14 +2,15 @@ Docker templates
 =================
 
 Running docker containers in virtualbox which is maintained by Vagrant.
+These docker templates is the quick way to setup your development environments including: Zookeeper, Kafka, Spark, or your custom application.
 
 1. Hello world
 2. Zookeeper
 3. Kafka with zookeeper
 4. Java application template
-5. Spark standalone for development, the UI will be available at 8081 at your machine
+5. Spark standalone for development
 
-Start Vagrant, rebuild Vagrant (at the current git repo dir, it will be mounted to /vagrant dir in guest machine)
+Start Vagrant, rebuild Vagrant (Run commands at the current git repo dir, it will be mounted to /vagrant dir in guest machine)
 ---------------
 
 	vagrant init precise64 http://files.vagrantup.com/precise64.box
@@ -29,13 +30,34 @@ Install Docker at guest machine
 	sudo apt-get update
 	sudo apt-get install lxc-docker
 
+Start zookeeper
+----------------
+
+	vagrant ssh
+	cd /vagrant/zookeeper
+	sudo docker build -t bruce/zookeeper .
+	./start.sh OR
+	sudo docker run -d -p 2181:2181 bruce/zookeeper
+
 Start Kafka
 ----------------
 
 	vagrant ssh
 	cd /vagrant/kafka
 	sudo docker build -t bruce/kafka .
-	./start.sh
+	./start.sh OR
+	sudo docker run -d -p 2181:2181 -p 9092:9092 bruce/kafka
+
+Start Spark
+----------------
+
+The spark UI will be available at 8081 at your machine.
+
+	vagrant ssh
+	cd /vagrant/spark
+	sudo docker build -t bruce/spark .
+	./start.sh OR
+	sudo docker run -d -p 7077:7077 -p 8080:8080 bruce/spark
 
 Useful Docker commands
 ----------------
