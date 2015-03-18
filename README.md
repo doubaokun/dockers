@@ -2,6 +2,7 @@ Docker templates
 =================
 
 Running docker containers in virtualbox which is maintained by Vagrant.
+
 These docker templates is the quick way to setup your development environments including: Zookeeper, Kafka, Spark, or your custom application.
 
 1. Hello world
@@ -10,8 +11,10 @@ These docker templates is the quick way to setup your development environments i
 4. Java application template
 5. Spark standalone for development
 
-Start Vagrant, rebuild Vagrant (Run commands at the current git repo dir, it will be mounted to /vagrant dir in guest machine)
+Start Vagrant, rebuild Vagrant 
 ---------------
+
+Run commands at the current git repo dir, it will be mounted to /vagrant dir in guest machine
 
 	vagrant init precise64 http://files.vagrantup.com/precise64.box
 	vagrant up
