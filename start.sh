@@ -5,4 +5,4 @@
 #sudo docker run -d -p 2181:2181 -p 9092:9092 bruce/kafka
 
 # Run spark
-#sudo docker run -d -p 7077:7077 -p 8080:8080 bruce/spark
+#sudo docker run -d -p 6066:6066 -p 7077:7077 -p 8080:8080 -p 8081:8081 bruce/spark

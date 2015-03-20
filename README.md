@@ -60,7 +60,24 @@ The spark UI will be available at 8081 at your machine.
 	cd /vagrant/spark
 	sudo docker build -t bruce/spark .
 	./start.sh OR
-	sudo docker run -d -p 7077:7077 -p 8080:8080 bruce/spark
+	sudo docker run -d -p 6066:6066 -p 7077:7077 -p 8080:8080 -p 8081:8081 bruce/spark
+
+Submit application to spark cluster
+
+	./bin/spark-submit \
+	--class org.apache.spark.examples.SparkPi \
+	--master spark://127.0.0.1:7077 \
+	--deploy-mode cluster \
+	examples/target/spark-examples_2.10-1.3.0-SNAPSHOT.jar \
+	10
+
+Run spark application
+
+	./bin/spark-submit \
+	--class org.apache.spark.examples.SparkPi \
+	--master local\[2\] \
+	examples/target/spark-examples_2.10-1.3.0-SNAPSHOT.jar \
+	10
 
 Useful Docker commands
 ----------------
